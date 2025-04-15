@@ -1,0 +1,40 @@
+.cta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.35em;
+
+    &.large{
+        font-size: 24px
+    }
+
+    &.medium{
+        font-size: 16px
+    }
+
+    &.small{
+        font-size: 12px
+    }
+
+    &.green{
+        background-color: $green;
+        color: #fff;
+    }
+
+    &.blue{
+        background-color: $blue;
+        color: #fff;
+
+        &.outline{
+            background-color: transparent;
+            color: $blue;
+            border: 1px solid $blue;
+        }
+    }
+
+    a{
+        padding: 1em 1.25em;
+        font-weight: $font_w_bold;
+        text-decoration: none;
+    }
+}

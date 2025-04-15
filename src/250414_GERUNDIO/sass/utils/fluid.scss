@@ -1,0 +1,28 @@
+@function strip-unit($number){
+    @if type-of($number) == "number" and not unitless($number){
+        @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+}
+
+@mixin fluid-type($properties, $minValue, $maxValue, $minVW: 300px, $maxVW: 1440px){
+    @each $property in $properties {
+        #{$property}: $minValue
+    }
+
+    @media (min-width: $minVW){
+        @each $property in $properties {
+            #{$property}: calc(#{$minValue} + #{strip-unit($maxValue - $minValue)} * (100vw - #{$minVW})/ #{strip-unit($maxVW - $minVW)})
+        }
+    }
+
+    @media (min-width: $maxVW) {
+        @each $property in $properties {
+            #{$property}: $maxValue
+        }
+    }
+}
+
+@mixin fluidType($type_min, $type_max, $vw_min: 300px, $vw_max: 1440px ){
+    font-size: calc(#{$type_min}px + #{strip-unit($type_max - $type_min)} * (100vw - #{$vw_min}) / #{strip-unit($vw_max - $vw_min)});
+}

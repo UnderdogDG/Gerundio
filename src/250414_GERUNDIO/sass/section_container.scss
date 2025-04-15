@@ -1,0 +1,13 @@
+.section_container {
+    width: 100%;
+    position: relative;
+}
+
+.holder{
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0%, -100%);
+}

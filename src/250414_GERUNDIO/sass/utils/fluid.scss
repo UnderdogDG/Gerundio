@@ -26,3 +26,7 @@
 @mixin fluidType($type_min, $type_max, $vw_min: 300px, $vw_max: 1440px ){
     font-size: calc(#{$type_min}px + #{strip-unit($type_max - $type_min)} * (100vw - #{$vw_min}) / #{strip-unit($vw_max - $vw_min)});
 }
+
+@mixin fluidTypeUnit($type_min, $type_max, $unit: "em", $vw_min: 300px, $vw_max: 1440px ){
+    font-size: calc(#{$type_min}#{$unit} + #{strip-unit($type_max - $type_min)} * (100vw - #{$vw_min}) / #{strip-unit($vw_max - $vw_min)});
+}

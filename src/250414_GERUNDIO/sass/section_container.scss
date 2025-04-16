@@ -1,6 +1,8 @@
 .section_container {
     width: 100%;
     position: relative;
+    @include fluid-type(padding-top padding-bottom, 36px, 51px);
+    @include fluid-type(padding-left padding-right, 11px, 94px);
 }
 
 .holder{

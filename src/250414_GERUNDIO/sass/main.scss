@@ -11,10 +11,13 @@
 // @import './text.scss';
 // @import './utilities.scss';
 
+@import './text.scss';
 @import './section_container.scss';
 @import './cta.scss';
 
 @import './navbar.scss';
+@import './section_benefits.scss';
+@import './section_getinto.scss';
 
 body{
     font-family: Poppins, sans-serif;

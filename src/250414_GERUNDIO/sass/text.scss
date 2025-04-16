@@ -1,0 +1,139 @@
+.text-nav__title{
+    @include fluidType(16, 28);
+    font-family: $font_primary;
+    font-weight: $font_w_bold;
+    line-height: 1.5em;
+    margin: 0;
+
+    .blue, &.blue{
+        color: $blue;
+    }
+
+    .green, &.green{
+        color: $green;
+    }
+}
+
+.text-section__title{
+    @include fluidType(37, 53);
+    font-family: $font_primary;
+    font-weight: $font_w_bold;
+    line-height: 1.5em;
+    margin: 0;
+
+    .blue, &.blue{
+        color: $blue;
+    }
+
+    .green, &.green{
+        color: $green;
+    }
+}
+
+.text-section__subtitle{
+    @include fluidType(28, 38);
+    font-family: $font_primary;
+    font-weight: $font_w_bold;
+    line-height: 1.5em;
+    margin: 0;
+    text-align: left;
+
+    .blue, &.blue{
+        color: $blue;
+    }
+
+    .green, &.green{
+        color: $green;
+    }
+}
+
+.text-subtitle{
+    font-size: 24px;
+    font-family: $font_primary;
+    font-weight: $font_w_bold;
+    line-height: 1.5em;
+    margin: 0;
+
+    .blue, &.blue{
+        color: $blue;
+    }
+
+    .green, &.green{
+        color: $green;
+    }
+}
+
+.text-body{
+    // @include fluidTypeUnit(1.2, 1.5);
+    font-size: 18px;
+    font-family: $font_primary;
+    font-weight: $font_w_light;
+    line-height: 1.5em;
+    color: $blue !important;
+    margin: 0;
+}
+
+.text-vignette{
+    // @include fluidTypeUnit(22, 1.5);
+    font-size: 22px;
+    font-family: $font_primary;
+    font-weight: $font_w_light;
+    line-height: 1.5em;
+    margin: 0;
+
+    .blue, &.blue{
+        color: $blue;
+    }
+
+    .green, &.green{
+        color: $green;
+    }
+}
+
+.list-item{
+    font-size: 28px;
+    font-family: $font_primary;
+    font-weight: $font_w_bold;
+    line-height: 1.5em;
+    margin: 0;
+
+    .blue, &.blue{
+        color: $blue;
+    }
+
+    .green, &.green{
+        color: $green;
+    }
+}
+
+.text-footer{
+    @include fluidTypeUnit(16, 20);
+    font-family: $font_primary;
+    font-weight: $font_w_medium;
+    line-height: 1.5em;
+    margin: 0;
+
+    .blue, &.blue{
+        color: $blue;
+    }
+
+    .green, &.green{
+        color: $green;
+    }
+}
+
+.text-rights{
+    font-size: 20px;
+    font-family: $font_primary;
+    font-weight: $font_w_medium;
+    line-height: 1.5em;
+    margin: 0;
+
+    .blue, &.blue{
+        color: $blue;
+    }
+
+    .green, &.green{
+        color: $green;
+    }
+}

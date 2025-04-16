@@ -1,6 +1,8 @@
 include ./partials/head.pug
 include ./components/navbar.pug
 include ./components/hero.pug
+include ./components/section_benefits.pug
+include ./components/section_getinto.pug
 
 - var title = "Dunna - A Destination of Luxury and Living in Cabo";
 - var description = "A new destination for luxury living nestled within Cabo’s breathtaking landscape.";
@@ -11,7 +13,9 @@ include ./components/hero.pug
     +head(title, description, keywords, title, description, url, "website", "https://dunna.com/img/", "1200", "630")
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     +body
-        +navbar
-        +hero 
+        //- +navbar
+        +hero
+        +section_benefits
+        +section_getinto

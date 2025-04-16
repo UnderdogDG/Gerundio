@@ -24,4 +24,5 @@ $colors: map-remove($colors, "blue", "indigo", "purple", "pink", "red", "orange"
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1;
     --bs-body-text-align: left;
+    --bs-body-color-rgb: $blue;
 }

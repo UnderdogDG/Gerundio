@@ -1,0 +1,21 @@
+mixin section_hero
+    header.section_container 
+        span.holder(id="home")
+        .section-hero
+            .hero-column
+                .section-claim 
+                    .claim
+                        h1.text-section__title.blue.text-center-md-left
+                            span.blue Smart Insurance Solutions for a Worry 
+                            span.green Free Life
+                        p.text-body.text-center-md-left ay protected with flexible coverage that safeguards your health, family, and assets. Choose the right plan and enjoy financial peace of mind.
+
+                    .cta-bar
+                        +cta("Get a Free Quote", "large solid green", "#")
+                        +cta("View Our Plans", "large blue outline", "#")
+            .hero-column
+                .hero-image 
+                    img(src="./img/hero_main.png", alt="Smart Insurance Solutions for a Worry Free Life")
+
+
+

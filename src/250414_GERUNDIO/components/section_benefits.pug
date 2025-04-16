@@ -4,13 +4,13 @@ mixin benefits_card($title, $description, $icon, alt="")
             .card-icon 
                 .icon__container 
                     .icon__img
-                        img(src="./img/icons/" + $icon, alt=$alt, srcset="")
+                        img(src="./icons/" + $icon, alt=$alt, srcset="")
         .benefit-card__title 
             h3.text-vignette.green=$title
         .benefit-card__content
             p.text-body=$description
 
-mixin section_benefits 
+mixin section_benefits
     +section("benefits")
         .section-benefits
             .benefits-header 
@@ -24,6 +24,4 @@ mixin section_benefits
                 +benefits_card("Secure and Private", "Your personal data and transactions are fully protected with the latest encryption, ensuring security and confidentiality at all times.", "icon_secure.png")
                 +benefits_card("Global Coverage Plans", "Stay protected wherever you go with worldwide insurance coverage, offering peace of mind for both travel and daily life.", "icon_coverage.png")
                 +benefits_card("Affordable Premium Options", "Get high-value insurance plans with transparent pricing, no hidden fees, and competitive rates tailored to your financial needs.", "icon_options.png")
-                 
-
-
+                

@@ -4,6 +4,7 @@
 @import "./utils/media.scss";
 @import "./utils/fluid.scss";
 @import './utils/values.scss';
+@import './utils/icon.scss';
 
 // @import './fonts.scss';
 @import './utils/swatch.scss';
@@ -16,12 +17,17 @@
 @import './cta.scss';
 
 @import './navbar.scss';
+@import './section_hero.scss';
 @import './section_benefits.scss';
 @import './section_getinto.scss';
+@import './section_getintouch.scss';
+@import './section_footer.scss';
+
 
 body{
     font-family: Poppins, sans-serif;
     font-size: 16px;
     font-weight: $font_w_light;
-    background-color: $bg;
+    // background-color: $bg;
+    background-color: #FFF;
 }

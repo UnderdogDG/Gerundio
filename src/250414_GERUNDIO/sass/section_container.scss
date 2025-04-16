@@ -2,7 +2,14 @@
     width: 100%;
     position: relative;
     @include fluid-type(padding-top padding-bottom, 36px, 51px);
-    @include fluid-type(padding-left padding-right, 11px, 94px);
+    @include fluid-type(padding-left padding-right, 11px, 93px);
+}
+
+.section_hero{
+    width: 100%;
+    position: relative;
+    @include fluid-type(padding-bottom, 36px, 51px);
+    @include fluid-type(padding-left padding-right, 11px, 93px);
 }
 
 .holder{
@@ -12,4 +19,11 @@
     top: 0;
     left: 0;
     transform: translate(0%, -100%);
+}
+
+.main-container{
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: $bg;
 }

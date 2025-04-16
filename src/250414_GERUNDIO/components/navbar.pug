@@ -1,5 +1,27 @@
 include ./cta.pug
 
+mixin nav_item($label="", $href="#")
+    li.nav-menu__item
+        a.nav-menu__link.text-nav-menu__item.blue(href=$href)=$label
+
 mixin navbar 
     nav.navbar
-        +cta("Get Started", "green large")
+        .navbar__container
+            .nav-logo__container
+                a.nav-logo.text-nav__title.green Shield Plus
+            .nav-menu__container
+                .nav-menu
+                    +nav_item("Home", "#home")
+                    +nav_item("Plans", "#")
+                    +nav_item("Benefits", "#benefits")
+                    +nav_item("Claims", "#getinto")
+                    +nav_item("Testimonials", "#")
+                    +nav_item("Contact Us", "#contact-us")
+                .nav-hamburguer 
+                    +icon 
+                        .handlebar__container 
+                            span.handlebar
+                        //- span.handle-bar
+
+            .nav-cta__container
+                +cta("Get Started", "green small-to-large")

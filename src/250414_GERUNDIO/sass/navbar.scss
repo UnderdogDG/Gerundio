@@ -1,7 +1,169 @@
 .navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100dvw;
+    padding: 59px 95px 0;
+    @include fluid-type(padding-top, 55px, 80px);
+    padding-bottom: 20px;
+    @include fluid-type(padding-left padding-right, 11px, 93px);
+    background-color: $bg;
+    z-index: 998;
+
+    .navbar__container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        position: relative;
+
+        .nav-logo__container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            order: 2;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include mediaSize($md){
+                position: static;
+                order: 1;
+            }
+
+            .nav-logo{
+                text-decoration: none;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        .nav-menu__container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            gap: 10px;
+            order: 1;
+
+            @include mediaSize($md){
+                order: 2;
+            }
+
+            .nav-hamburguer{
+                display: block;
+                width: 60px;
+                position: relative;
+                padding: 5px;
+
+                @include mediaSize($md){
+                    display: none;
+                }
+
+                .handlebar__container{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .handlebar{
+                        display: block;
+                        content: "";
+                        width: 100%;
+                        height: 3px;
+                        background-color: $blue;
+                        border-radius: 300px;
+                        margin: 5px 0;
+                        transition: all 0.3s ease-in-out;
+                        position: relative;
+
+                        &::after, &::before{
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 3px;
+                            background-color: $blue;
+                            border-radius: 300px;
+                            position: absolute;
+                        }
+
+                        &::after{
+                            top: 14px;
+                            left: 0;
+                            // transform: translate(0, 8px);
+                        }
+                        
+                        &::before{
+                            bottom: 14px;
+                            left: 0;
+                            // transform: translate(0, 8px);
+                            // transform: rotate(-45deg);
+                        }
+
+                        
+                    }
+                }
+            }
+
+            
+            .nav-menu{
+                display: none;
+                justify-content: center;
+                align-items: center;
+                visibility: hidden;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                opacity: 0;
+                gap: 22px;
+                position: absolute;
+
+                @include mediaSize($lg){
+                    display: flex;
+                    visibility: visible;
+                    opacity: 1;
+                    position: static;
+                }
+
+                .nav-menu__item{
+                    margin: 0;
+                    padding: 0;
+        
+                    a{
+                        text-decoration: none;
+                    
+        
+                        &:hover{
+                            // text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .nav-cta__container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            order: 3;
+
+            @include mediaSize($md){
+                order: 3;
+            }
+        }
+    }
+
+
 
 }

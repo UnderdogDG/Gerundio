@@ -5,6 +5,7 @@
     border-radius: 0.35em;
     font-family: $font_primary;
     font-weight: $font_w_bold;  
+    white-space: nowrap;
 
     &.large{
         font-size: 24px
@@ -15,7 +16,15 @@
     }
 
     &.small{
-        font-size: 12px
+        font-size: 12px;
+
+        &-to-large{
+            font-size: 12px;
+
+            @include mediaSize($md){
+                font-size: 24px;
+            }
+        }
     }
 
     &.green{

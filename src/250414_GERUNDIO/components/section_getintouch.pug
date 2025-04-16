@@ -1,0 +1,38 @@
+mixin quick_link_item($label="", $href="#")
+    li.quick-link__item 
+        a(class="text-body", href=$href, target="_blank")=$label
+
+mixin contact_item($label="", $href="#")
+    li.contact-method__item
+        a.contact-method__item__link(class="text-body", href=$href, target="_blank")
+            span.contact-method__item__icon
+                +icon
+                    block
+            span.contact-method__item__label=$label
+
+mixin section_getintouch 
+    +section("get-in-touch")
+        .section-getintouch 
+            .section-getintouch__column
+                h2.text-section__subtitle.green Shield Plus
+                p.text-body Providing reliable coverage for health, life, travel, and assets with seamless claim processes and 24/7 support.
+                ul.contact-methods 
+                    +contact_item("+(123) 456-7890", "tel:+1234567890")
+                        img(src="./icons/icon_phone.png", alt="phone number")
+                    +contact_item("support@Shield Plus.com", "mailto:support@shieldplus.com")
+                        img(src="./icons/icon_mail.png", alt="e-mail")
+
+            .section-getintouch__column.center-to-md-start
+                h3.text-subtitle.green.text-center-md-left Quick Links
+                ul.quick-links
+                    +quick_link_item("Insurance Plans")
+                    +quick_link_item("Claims Assistance")
+                    +quick_link_item("Customer Support")
+                    +quick_link_item("About Us")
+            .section-getintouch__column.center-to-md-start
+                h3.text-subtitle.green.text-center-md-left Subscribe to Our Newsletter
+                p.text-news.blue Providing reliable coverage for health, life, travel, and assets with seamless claim processes and 24/7 support.
+                #contact-us.section-form
+                    form.contact-form(method="post", action="#")
+                        input(type="email", name="email", placeholder="Enter Your Email", required="required")
+                        input(class="cta small solid green" value="Subscribe" type="submit")

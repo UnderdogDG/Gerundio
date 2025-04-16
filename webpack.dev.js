@@ -107,7 +107,7 @@ module.exports = {
 
     devServer: {
         static: {
-            directory: path.join(__dirname, `./public/${project.projectFolder}`)
+            directory: path.join(__dirname, `./public`)
         },
         liveReload: true,
         open: true

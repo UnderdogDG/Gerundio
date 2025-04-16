@@ -1,0 +1,15 @@
+mixin help_item($label="", $href="#")
+    li.help-list__item 
+        a(class="text-footer blue", href=$href, target="_blank")=$label
+
+mixin section_footer
+    footer.section-footer
+        span.line 
+        aside.column-copyrights
+            p.text-rights.blue © 2025 Shield Plus. All rights reserved.
+        asice.column-help
+            ul.help-list
+                +help_item("Terms & Conditions", "#")
+                +help_item("Privacy Policy", "#")
+                +help_item("Licensing", "#")
+            

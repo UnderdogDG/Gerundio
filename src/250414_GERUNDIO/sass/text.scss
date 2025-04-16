@@ -14,6 +14,22 @@
     }
 }
 
+.text-nav-menu__item{
+    font-size: 16px;
+    font-family: $font_primary;
+    font-weight: $font_w_light;
+    line-height: 1.5em;
+    margin: 0;
+
+    .blue, &.blue{
+        color: $blue;
+    }
+
+    .green, &.green{
+        color: $green;
+    }
+}
+
 .text-section__title{
     @include fluidType(37, 53);
     font-family: $font_primary;
@@ -106,8 +122,24 @@
     }
 }
 
+.text-news{
+    font-size: 12px;
+    font-family: $font_primary;
+    font-weight: $font_w_light;
+    line-height: 1.5em;
+    margin: 0;
+
+    .blue, &.blue{
+        color: $blue;
+    }
+
+    .green, &.green{
+        color: $green;
+    }
+}
+
 .text-footer{
-    @include fluidTypeUnit(16, 20);
+    @include fluidType(16, 20);
     font-family: $font_primary;
     font-weight: $font_w_medium;
     line-height: 1.5em;
@@ -135,5 +167,13 @@
 
     .green, &.green{
         color: $green;
+    }
+}
+
+.text-center-md-left{
+    text-align: center;
+
+    @include mediaSize($md){
+        text-align: left;
     }
 }

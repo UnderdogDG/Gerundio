@@ -46,18 +46,22 @@
     }
 
     .column-copyrights{
+        width: 100%;
         display: flex;
         // min-width: 300px;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         order: 3;
-
-        @include mediaSize($md){
+        
+        @include mediaSize($lg){
+            width: auto;
+            justify-content: flex-start;
             order: 2;
         }
     }
 
     .column-help{
+        width: 100%;
         display: flex;
         // min-width: 300px;
         flex-direction: row;
@@ -65,15 +69,16 @@
         align-items: baseline;
         order: 1;
 
-        @include mediaSize($md){
+        @include mediaSize($lg){
             order: 3;
+            width: auto;
         }
         
         .help-list{
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-around;
             align-items: baseline;
             gap: 38px;
             list-style: none;

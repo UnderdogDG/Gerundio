@@ -14,6 +14,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
+
+        @include mediaSize($md){
+            width: calc(50% - 13px);
+        }
         
         .section-claim{
             width: 100%;
@@ -38,7 +42,7 @@
             }
             
             .cta-bar{
-                // width: 100%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 flex-wrap: nowrap;
@@ -47,6 +51,16 @@
                 gap: 23px;
                 
                 @include mediaSize($sm){
+                    justify-content: center;
+                    align-items: stretch;
+                    flex-direction: row;
+                }
+                
+                @include mediaSize($md){
+                    flex-direction: column;
+                }
+
+                @include mediaSize($xl){
                     justify-content: flex-start;
                     align-items: stretch;
                     flex-direction: row;

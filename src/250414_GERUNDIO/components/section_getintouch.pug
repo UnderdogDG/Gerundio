@@ -10,10 +10,16 @@ mixin contact_item($label="", $href="#")
                     block
             span.contact-method__item__label=$label
 
+mixin social_item($href="#")
+    li.social-icon__container
+        a(href=$href, target="_blank")
+            +icon
+                block
+
 mixin section_getintouch 
     +section("get-in-touch")
         .section-getintouch 
-            .section-getintouch__column
+            .section-getintouch__column.s-1
                 h2.text-section__subtitle.green Shield Plus
                 p.text-body Providing reliable coverage for health, life, travel, and assets with seamless claim processes and 24/7 support.
                 ul.contact-methods 
@@ -22,17 +28,22 @@ mixin section_getintouch
                     +contact_item("support@Shield Plus.com", "mailto:support@shieldplus.com")
                         img(src="./icons/icon_mail.png", alt="e-mail")
 
-            .section-getintouch__column.center-to-md-start
+            .section-getintouch__column.center-to-md-start.s-2
                 h3.text-subtitle.green.text-center-md-left Quick Links
                 ul.quick-links
                     +quick_link_item("Insurance Plans")
                     +quick_link_item("Claims Assistance")
                     +quick_link_item("Customer Support")
                     +quick_link_item("About Us")
-            .section-getintouch__column.center-to-md-start
+            .section-getintouch__column.center-to-md-start.s-3
                 h3.text-subtitle.green.text-center-md-left Subscribe to Our Newsletter
                 p.text-news.blue Providing reliable coverage for health, life, travel, and assets with seamless claim processes and 24/7 support.
                 #contact-us.section-form
                     form.contact-form(method="post", action="#")
                         input(type="email", name="email", placeholder="Enter Your Email", required="required")
                         input(class="cta small solid green" value="Subscribe" type="submit")
+                ul.social-bar 
+                    +social_item 
+                        img(src="./icons/rrss_x.png", alt="x")
+                    +social_item 
+                        img(src="./icons/rrss_fb.png", alt="facebook")

@@ -2,20 +2,30 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     gap: 35px 72px;
 
+    @include mediaSize($md){
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+
     .section-getintouch__column{
-        width: 30%;
+        width: 90%;
         min-width: 300px;
-        flex-grow: 1;
+        // flex-grow: 1;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         gap: 35px;
+
+        @include mediaSize($md){
+            width: 28%;
+        }
 
         &.center-to-md-start{
             align-items: center;
@@ -24,6 +34,47 @@
                 align-items: flex-start;
             }
 
+        }
+
+        &.s-1{
+            order:1
+        }
+
+        &.s-2{
+            width: 100%;
+            order: 3;
+
+
+            @include mediaSize($xl){
+                width: 29%;
+                order: 2;
+            }
+
+            .quick-links{
+                justify-content: space-between;
+
+                @include mediaSize($xl){
+                    justify-content: center;
+                    align-items: stretch;
+                }
+                .quick-link__item{
+                    width: auto;
+
+                    @include mediaSize($xl){
+                        width: calc(50% - 25px);
+                    }
+                }
+
+            }
+
+        }
+
+        &.s-3{
+            order: 2;
+
+            @include mediaSize($xl){
+                order: 3;
+            }
         }
 
         .contact-methods{
@@ -90,7 +141,7 @@
             padding: 0;
             
             @include mediaSize($md){
-                width: calc(50% - 25px);
+                // width: calc(50% - 25px);
                 flex-direction: row;
                 justify-content: center;
                 align-items: stretch;
@@ -168,6 +219,38 @@
                     border: none;
                     padding: 1em 1.13em;
                     box-sizing: border-box;
+                }
+            }
+
+        }
+        
+        .social-bar{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            order: 4;
+
+            @include mediaSize($md){
+                justify-content: center;
+                align-items: stretch;
+            }
+
+            .social-icon__container{
+                width: 50px;
+                padding: 0;
+                margin: 0;
+
+                a{
+                    display: block;
+                    width: 100%;
+                    padding: 5px;
+                    text-decoration: none;
                 }
             }
         }

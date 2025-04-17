@@ -1,12 +1,12 @@
-#GERUNDIO - Prueba Técnica
-##Especificaciones del Environment
+# GERUNDIO - Prueba Técnica
+## Especificaciones del Environment
 - Node.js
 - Webpack
 - Javascript
 - Pug
 - SASS
 
-##Como visualizar
+## Como visualizar
 - Sin ejecución de Environment: En la carpeta Build se encuentran los archivos(HTML, JS, CSS e imagenes) finales, no es necesario ejecutar desde server.
 - Ejecución con Environment:
   - Tener Python instalado y accesible en el enviroment global del operativo
